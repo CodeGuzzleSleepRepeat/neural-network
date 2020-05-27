@@ -3,6 +3,8 @@
 #include "nn.h"
 using namespace std;
 
+///////////////////This very build made for solving a particular regression problem (some parameters are not default)
+
 
 double count_mistake(nn clf, vector<vector<double>> &data, vector<double> &answers){
     int size = data.size() * 0.75;
@@ -47,7 +49,7 @@ int main(int argc, char *argv[])
             test_data[i - size][j] = data[i][j];
         test_answers[i - size] = answers[i];
     }
-    nn regr(2, {60, 1}, {"sigmoid", "sq"}, 1, 0, 0.0005); //parameter 4 - 1 for regr, 0 for clf
+    nn regr(2, {60, 1}, {"sigmoid", "sq"}, 1, 0, 0.0005); //parameter 4 - 1 for regression, 0 for classification
                                                          //parameter 5 - regularization coef
                                                        //parameter 6 - loosing param (put -1 to turn loosing off
                                                         //parameter 7 - function choosing anti-gradient step
