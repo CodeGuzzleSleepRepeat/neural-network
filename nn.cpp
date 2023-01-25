@@ -36,11 +36,11 @@ double relu::der(double x, double y){
 }
 
 double logfm::func(double x, double y){
-
+    return 1;
 }
 
 double logfm::der(double x, double y){
-
+    return 1;
 }
 
 double sq::func(double x){
